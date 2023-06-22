@@ -11,7 +11,6 @@ function App() {
   const SelectMenuProps = {
     region,
     setRegion,
-    city,
     setCity,
   };
   const cityObj = CITIES[region].find(obj=>obj.city === city) || CITIES.european[0]; 
