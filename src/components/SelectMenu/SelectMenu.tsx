@@ -3,10 +3,9 @@ import { CITIES, REGIONS, RegionType } from "../../utils/cities";
 export default function SelectMenu(props: {
   region: RegionType;
   setRegion: React.Dispatch<React.SetStateAction<RegionType>>;
-  city: string;
   setCity: React.Dispatch<React.SetStateAction<string>>;
 }) {
-  const { region, setRegion, city, setCity } = props;
+  const { region, setRegion, setCity } = props;
 
   const cityArr = CITIES[region];
 
