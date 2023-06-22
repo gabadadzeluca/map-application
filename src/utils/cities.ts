@@ -1,4 +1,4 @@
-type City = {
+export type City = {
   city: string;
   lat: number;
   lng: number;
@@ -9,6 +9,8 @@ type CityCategory = {
   asian: City[];
   african: City[];
 };
+
+export type RegionType = 'european' | 'african' | 'asian';
 
 
 const AFRICAN_CITIES: City[] = [
@@ -55,3 +57,5 @@ export const CITIES :CityCategory = {
   african: AFRICAN_CITIES, 
   asian: ASIAN_CITIES,
 }
+
+export const REGIONS:RegionType[] = ['european', 'african', 'asian'];
