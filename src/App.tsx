@@ -5,7 +5,7 @@ import { RegionType, CITIES } from "./utils/cities";
 import { useState } from "react";
 
 function App() {
-  const [region, setRegion] = useState<RegionType>("european");
+  const [region, setRegion] = useState<RegionType>("europe");
   const [city, setCity] = useState<string>(CITIES[region][0].city);
 
   const SelectMenuProps = {
@@ -13,7 +13,7 @@ function App() {
     setRegion,
     setCity,
   };
-  const cityObj = CITIES[region].find(obj=>obj.city === city) || CITIES.european[0]; 
+  const cityObj = CITIES[region].find(obj=>obj.city === city) || CITIES.europe[0]; 
 
   return (
     <SContainer>

@@ -17,7 +17,7 @@ export default function SelectMenu(props: {
     e: React.ChangeEvent<HTMLSelectElement>
   ): void => {
     const value = e.target.value;
-    if (value === "european" || value === "asian" || value === "african")
+    if (value === "europe" || value === "asia" || value === "africa")
       setRegion(value);
   };
 
