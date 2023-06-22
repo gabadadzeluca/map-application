@@ -14,10 +14,12 @@ function App() {
     city,
     setCity,
   };
+  const cityObj = CITIES[region].find(obj=>obj.city === city) || CITIES.european[0]; 
+
   return (
     <SContainer>
       <SelectMenu {...SelectMenuProps} />
-      <MapComponent />
+      <MapComponent city={cityObj}/>
     </SContainer>
   );
 }
