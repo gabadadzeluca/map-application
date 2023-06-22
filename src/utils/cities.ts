@@ -5,12 +5,12 @@ export type City = {
 };
 
 type CityCategory = {
-  european: City[];
-  asian: City[];
-  african: City[];
+  europe: City[];
+  asia: City[];
+  africa: City[];
 };
 
-export type RegionType = 'european' | 'african' | 'asian';
+export type RegionType = 'europe' | 'africa' | 'asia';
 
 
 const AFRICAN_CITIES: City[] = [
@@ -53,9 +53,9 @@ const ASIAN_CITIES: City[] = [
 ];
 
 export const CITIES :CityCategory = {
-  european: EUROPEAN_CITIES,
-  african: AFRICAN_CITIES, 
-  asian: ASIAN_CITIES,
+  europe: EUROPEAN_CITIES,
+  africa: AFRICAN_CITIES, 
+  asia: ASIAN_CITIES,
 }
 
-export const REGIONS:RegionType[] = ['european', 'african', 'asian'];
+export const REGIONS:RegionType[] = ['europe', 'africa', 'asia'];
