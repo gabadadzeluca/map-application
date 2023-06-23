@@ -1,13 +1,22 @@
-import { LatLngExpression, LatLngTuple, LeafletMouseEvent } from "leaflet";
+import { LatLngTuple, LeafletMouseEvent, icon } from "leaflet";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import styled from "styled-components";
 import { City } from "../../utils/cities";
 import { useReducer, useRef, useEffect } from "react";
 import { markerReducer, ACTIONS } from "../../utils/MarkerReducer";
+import markerSvg from "../../assets/marker.svg";
+
+
+const customIcon = icon({
+  // Specify the path to your custom icon image
+  iconUrl: markerSvg,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
 
 export default function MapComponent(props: { city: City }) {
   const city = props.city;
-  const center: LatLngExpression = [city.lat, city.lng];
+  const center: LatLngTuple = [city.lat, city.lng];
   const [markers, dispatch] = useReducer(markerReducer, []);
   const mapRef = useRef<HTMLDivElement>(null);
 
@@ -65,7 +74,7 @@ export default function MapComponent(props: { city: City }) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {markers.map((marker, index) => (
-          <Marker key={index} position={marker} />
+          <Marker key={index} position={marker} icon={customIcon}/>
         ))}
         <MapClickHandler />
       </MapContainer>
