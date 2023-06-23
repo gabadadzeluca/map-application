@@ -33,4 +33,5 @@ const SButton = styled.button`
   border: none;
   background-color: white;
   width: 15rem;
+  font-size: 2rem;
 `
