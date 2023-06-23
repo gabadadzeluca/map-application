@@ -5,10 +5,17 @@ import { City } from "../utils/cities";
 import { AIRPORTS } from "../utils/airports";
 import { useReducer, useRef, useEffect } from "react";
 import { markerReducer, ACTIONS } from "../utils/MarkerReducer";
-import markerSvg from "../assets/marker.svg";
+import redMarkerSvg from "../assets/markerRed.svg";
+import blueMarkerSvg from "../assets/markerBlue.svg";
 
-const customIcon = icon({
-  iconUrl: markerSvg,
+const redIcon = icon({
+  iconUrl: redMarkerSvg,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
+
+const blueIcon = icon({
+  iconUrl: blueMarkerSvg,
   iconSize: [25, 41],
   iconAnchor: [12, 41],
 });
@@ -79,12 +86,12 @@ export default function MapComponent(props: {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {markers.map((marker, index) => (
-          <Marker key={index} position={marker} icon={customIcon} />
+          <Marker key={index} position={marker} icon={redIcon} />
         ))}
         {displayAirports && (
           <>
             {AIRPORTS.map((position, index) => (
-              <Marker key={index} position={position} icon={customIcon} />
+              <Marker key={index} position={position} icon={blueIcon} />
             ))}
           </>
         )}
