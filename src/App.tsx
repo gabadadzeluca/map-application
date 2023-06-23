@@ -13,7 +13,7 @@ function App() {
     setRegion,
     setCity,
   };
-  const cityObj = CITIES[region].find(obj=>obj.city === city) || CITIES.europe[0]; 
+  const cityObj = CITIES[region].find(obj=>obj.city === city) || CITIES[region][0]; 
 
   return (
     <SContainer>
