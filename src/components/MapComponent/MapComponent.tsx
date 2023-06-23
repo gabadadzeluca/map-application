@@ -65,7 +65,7 @@ export default function MapComponent(props: { city: City }) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {markers.map((marker, index) => (
-          <SMarker key={index} position={marker} />
+          <Marker key={index} position={marker} />
         ))}
         <MapClickHandler />
       </MapContainer>
@@ -85,11 +85,3 @@ const SDiv = styled.div`
     height: 80%;
   }
 `;
-
-const SMarker = styled(Marker)`
-  background-color: red;
-  background-color: red;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-`
