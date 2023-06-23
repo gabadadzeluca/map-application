@@ -15,5 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   button, select{
     font-family: inherit;
     font-weight: 500;
+    cursor: pointer;
   }
 `;
