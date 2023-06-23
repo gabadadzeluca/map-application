@@ -46,8 +46,8 @@ export default function SelectMenu(props: {
 const StyledSelect = styled.select`
   border: none;
   padding: 2rem 1rem;
-  width: 15rem;
-  max-width: 15rem;
+  width: 16rem;
+  max-width: 16rem;
   font-size: 1.5rem;
   border-radius: .5rem;
   background-color: white;
@@ -61,7 +61,7 @@ const SelectContainer = styled.div`
   display:inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
   margin-bottom: 4rem;
   margin-top: 4rem;
 `
