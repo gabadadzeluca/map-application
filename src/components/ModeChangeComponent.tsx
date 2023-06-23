@@ -24,7 +24,7 @@ const SDiv = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 30%;
 `
 
 const SButton = styled.button<{color:string}>`

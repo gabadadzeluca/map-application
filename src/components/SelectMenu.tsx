@@ -61,7 +61,7 @@ const SelectContainer = styled.div`
   display:inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
+  width: 30%;
   margin-bottom: 4rem;
   margin-top: 4rem;
 `
