@@ -9,4 +9,11 @@ export const GlobalStyle = createGlobalStyle`
   html{
     font-size: 62.5%
   }
+  body{
+    font-family: 'Pathway Extreme', sans-serif;
+  }
+  button, select{
+    font-family: inherit;
+    font-weight: 500;
+  }
 `;
