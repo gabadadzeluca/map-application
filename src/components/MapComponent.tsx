@@ -70,7 +70,7 @@ export default function MapComponent(props: {
       <MapContainer
         key={center.toString()}
         center={center}
-        zoom={10}
+        zoom={8}
         scrollWheelZoom={true}
         id="map"
       >
