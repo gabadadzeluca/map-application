@@ -21,12 +21,16 @@ export default function ModeChangeComponent(props:{
 
 
 const SDiv = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
 `
 
 const SButton = styled.button`
   padding: .5rem 1rem;
   border-radius: .5rem;
   border: none;
-  background-color: blue;
-  color: white;
+  background-color: white;
+  width: 15rem;
 `
