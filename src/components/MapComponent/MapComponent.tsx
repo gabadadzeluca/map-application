@@ -29,10 +29,8 @@ export default function MapComponent(props: { city: City }) {
 
   const handleMapClick = (e: LeafletMouseEvent): void => {
     const { lat, lng } = e.latlng;
-    const latlngTuple: LatLngTuple = [
-      parseFloat(lat.toFixed(2)),
-      parseFloat(lng.toFixed(2)),
-    ];
+    const latlngTuple: LatLngTuple = [lat, lng];
+
     if (e.originalEvent.button === 0) {
       dispatch({
         type: ACTIONS.ADD_MARKER,
@@ -67,7 +65,7 @@ export default function MapComponent(props: { city: City }) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {markers.map((marker, index) => (
-          <Marker key={index} position={marker} />
+          <SMarker key={index} position={marker} />
         ))}
         <MapClickHandler />
       </MapContainer>
@@ -87,3 +85,11 @@ const SDiv = styled.div`
     height: 80%;
   }
 `;
+
+const SMarker = styled(Marker)`
+  background-color: red;
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+`
