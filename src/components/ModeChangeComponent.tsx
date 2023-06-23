@@ -34,4 +34,8 @@ const SButton = styled.button`
   background-color: white;
   width: 15rem;
   font-size: 2rem;
+  &:hover{
+    background-color: blue;
+    color: white;
+  }
 `
