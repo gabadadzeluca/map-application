@@ -8,7 +8,6 @@ import markerSvg from "../../assets/marker.svg";
 
 
 const customIcon = icon({
-  // Specify the path to your custom icon image
   iconUrl: markerSvg,
   iconSize: [25, 41],
   iconAnchor: [12, 41],
