@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { City } from "../utils/cities";
 import { useReducer, useRef, useEffect } from "react";
 import { markerReducer, ACTIONS } from "../utils/MarkerReducer";
-import markerSvg from "../../assets/marker.svg";
+import markerSvg from "../assets/marker.svg";
 
 
 const customIcon = icon({
