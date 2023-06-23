@@ -63,7 +63,7 @@ export default function MapComponent(props: { city: City; markerOn: boolean}) {
   };
 
   return (
-    <SDiv ref={mapRef}>
+    <SDiv ref={mapRef} markerOn={markerOn}>
       <MapContainer
         key={center.toString()}
         center={center}
@@ -84,7 +84,7 @@ export default function MapComponent(props: { city: City; markerOn: boolean}) {
   );
 }
 
-const SDiv = styled.div`
+const SDiv = styled.div<{markerOn: boolean}>`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -94,5 +94,8 @@ const SDiv = styled.div`
     // leaflet container
     width: 80%;
     height: 80%;
+    border-radius: .6rem;
+    border: .1rem solid white;
+    cursor: ${({markerOn})=>markerOn ? 'pointer' : 'grab'};
   }
 `;
