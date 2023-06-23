@@ -1,4 +1,4 @@
-import { LatLngExpression } from "leaflet";
+import { LatLngTuple } from "leaflet";
 
 const ACTIONS: {
   ADD_MARKER: string;
@@ -8,15 +8,14 @@ const ACTIONS: {
   REMOVE_MARKER: "REMOVE_MARKER",
 };
 
-type Markers = LatLngExpression[];
+type Markers = LatLngTuple[];
 
 interface AddMarkerAction {
   type: typeof ACTIONS.ADD_MARKER;
-  payload: LatLngExpression;
+  payload: LatLngTuple;
 }
 interface RemoveMarkerAction {
   type: typeof ACTIONS.REMOVE_MARKER;
-  payload: LatLngExpression;
 }
 
 type ActionType = AddMarkerAction | RemoveMarkerAction;
@@ -24,9 +23,9 @@ type ActionType = AddMarkerAction | RemoveMarkerAction;
 const markerReducer = (state: Markers, action: ActionType) => {
   switch (action.type) {
     case ACTIONS.ADD_MARKER:
-      return [...state, action.payload];
+      return [...state, (action as AddMarkerAction).payload];
     case ACTIONS.REMOVE_MARKER:
-      return state.filter((tuple) => tuple !== action.payload);
+      return [...state.slice(0,-1)]
     default:
       return state;
   }
